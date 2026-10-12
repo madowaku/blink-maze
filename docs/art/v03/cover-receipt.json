@@ -1,0 +1,18 @@
+{
+  "path": "docs/art/v03/itch-cover.png",
+  "width": 1407,
+  "height": 1118,
+  "bytes": 3787269,
+  "sha256": "d126fc6c3952ec801c36873dcdd4418dc7ff40eee452065f4ffcaea2d421b89e",
+  "source_copy": "byte-identical",
+  "checked_title": "BLINK MAZE",
+  "processing": "none",
+  "upload": {
+    "path": "docs/art/v03/itch-cover-upload.png",
+    "width": 629,
+    "height": 500,
+    "bytes": 749841,
+    "sha256": "34f719ddd01c0ba2cfb5003ade682d6fb69f6f8b90a53562d4a501c106f47713",
+    "processing": "proportional downscale only; no crop or content edits"
+  }
+}

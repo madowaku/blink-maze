@@ -1,0 +1,537 @@
+{
+  "checked": "2026-10-12",
+  "mode": "CUA native keys and DOM controls",
+  "checks": [
+    {
+      "name": "360x800 stage 6",
+      "passed": true,
+      "evidence": {
+        "controls": [
+          {
+            "command": "blink",
+            "h": 56,
+            "w": 176
+          },
+          {
+            "command": "undo",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "restart",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "up",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "left",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "right",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "down",
+            "h": 44,
+            "w": 44
+          }
+        ],
+        "h": 800,
+        "images": true,
+        "sh": 800,
+        "sw": 360,
+        "w": 360
+      }
+    },
+    {
+      "name": "360x800 stage 7",
+      "passed": true,
+      "evidence": {
+        "controls": [
+          {
+            "command": "blink",
+            "h": 56,
+            "w": 176
+          },
+          {
+            "command": "undo",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "restart",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "up",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "left",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "right",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "down",
+            "h": 44,
+            "w": 44
+          }
+        ],
+        "h": 800,
+        "images": true,
+        "sh": 800,
+        "sw": 360,
+        "w": 360
+      }
+    },
+    {
+      "name": "360x800 stage 8",
+      "passed": true,
+      "evidence": {
+        "controls": [
+          {
+            "command": "blink",
+            "h": 56,
+            "w": 176
+          },
+          {
+            "command": "undo",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "restart",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "up",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "left",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "right",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "down",
+            "h": 44,
+            "w": 44
+          }
+        ],
+        "h": 800,
+        "images": true,
+        "sh": 800,
+        "sw": 360,
+        "w": 360
+      }
+    },
+    {
+      "name": "360x800 stage 9",
+      "passed": true,
+      "evidence": {
+        "controls": [
+          {
+            "command": "blink",
+            "h": 56,
+            "w": 176
+          },
+          {
+            "command": "undo",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "restart",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "up",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "left",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "right",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "down",
+            "h": 44,
+            "w": 44
+          }
+        ],
+        "h": 800,
+        "images": true,
+        "sh": 800,
+        "sw": 360,
+        "w": 360
+      }
+    },
+    {
+      "name": "360x800 stage 10",
+      "passed": true,
+      "evidence": {
+        "controls": [
+          {
+            "command": "blink",
+            "h": 56,
+            "w": 176
+          },
+          {
+            "command": "undo",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "restart",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "up",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "left",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "right",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "down",
+            "h": 44,
+            "w": 44
+          }
+        ],
+        "h": 800,
+        "images": true,
+        "sh": 800,
+        "sw": 360,
+        "w": 360
+      }
+    },
+    {
+      "name": "360x800 stage 11",
+      "passed": true,
+      "evidence": {
+        "controls": [
+          {
+            "command": "blink",
+            "h": 56,
+            "w": 176
+          },
+          {
+            "command": "undo",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "restart",
+            "h": 44,
+            "w": 84.5
+          },
+          {
+            "command": "up",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "left",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "right",
+            "h": 44,
+            "w": 44
+          },
+          {
+            "command": "down",
+            "h": 44,
+            "w": 44
+          }
+        ],
+        "h": 800,
+        "images": true,
+        "sh": 800,
+        "sw": 360,
+        "w": 360
+      }
+    },
+    {
+      "name": "Observation hint only",
+      "passed": true,
+      "evidence": "ヒント 1 / 3\n出口へつながる境目を、上と下で見比べよう。\n\nもう少しヒント"
+    },
+    {
+      "name": "Second hint",
+      "passed": true,
+      "evidence": "ヒント 2 / 3\n回数は「使える上限」。使い切らなくてもいい。\n\n具体的な手助けを見る"
+    },
+    {
+      "name": "Specific hint after explicit reveal",
+      "passed": true,
+      "evidence": "ヒント 3 / 3\n最初の床から下へ。眠っている琥珀の壁だけを通ってみよう。"
+    },
+    {
+      "name": "Hints reset on new maze",
+      "passed": true,
+      "evidence": "false"
+    },
+    {
+      "name": "UI solution stage 1",
+      "passed": true,
+      "evidence": {
+        "blinks": "1",
+        "complete": "true",
+        "phase": "1",
+        "result": "1まばたき3移動",
+        "title": "道が、見えた。"
+      }
+    },
+    {
+      "name": "UI solution stage 2",
+      "passed": true,
+      "evidence": {
+        "blinks": "2",
+        "complete": "true",
+        "phase": "0",
+        "result": "2まばたき4移動",
+        "title": "道が、見えた。"
+      }
+    },
+    {
+      "name": "UI solution stage 3",
+      "passed": true,
+      "evidence": {
+        "blinks": "1",
+        "complete": "true",
+        "phase": "1",
+        "result": "1まばたき4移動",
+        "title": "道が、見えた。"
+      }
+    },
+    {
+      "name": "UI solution stage 4",
+      "passed": true,
+      "evidence": {
+        "blinks": "1",
+        "complete": "true",
+        "phase": "1",
+        "result": "1まばたき6移動",
+        "title": "道が、見えた。"
+      }
+    },
+    {
+      "name": "UI solution stage 5",
+      "passed": true,
+      "evidence": {
+        "blinks": "1",
+        "complete": "true",
+        "phase": "1",
+        "result": "1まばたき8移動",
+        "title": "道が、見えた。"
+      }
+    },
+    {
+      "name": "UI solution stage 6",
+      "passed": true,
+      "evidence": {
+        "blinks": "0",
+        "complete": "true",
+        "phase": "0",
+        "result": "0まばたき6移動",
+        "title": "道が、見えた。"
+      }
+    },
+    {
+      "name": "UI solution stage 7",
+      "passed": true,
+      "evidence": {
+        "blinks": "1",
+        "complete": "true",
+        "phase": "1",
+        "result": "1まばたき8移動",
+        "title": "道が、見えた。"
+      }
+    },
+    {
+      "name": "UI solution stage 8",
+      "passed": true,
+      "evidence": {
+        "blinks": "2",
+        "complete": "true",
+        "phase": "0",
+        "result": "2まばたき6移動",
+        "title": "道が、見えた。"
+      }
+    },
+    {
+      "name": "UI solution stage 9",
+      "passed": true,
+      "evidence": {
+        "blinks": "1",
+        "complete": "true",
+        "phase": "1",
+        "result": "1まばたき10移動",
+        "title": "道が、見えた。"
+      }
+    },
+    {
+      "name": "UI solution stage 10",
+      "passed": true,
+      "evidence": {
+        "blinks": "1",
+        "complete": "true",
+        "phase": "0",
+        "result": "1まばたき8移動",
+        "title": "道が、見えた。"
+      }
+    },
+    {
+      "name": "UI solution stage 11",
+      "passed": true,
+      "evidence": {
+        "blinks": "2",
+        "complete": "true",
+        "phase": "0",
+        "result": "2まばたき13移動",
+        "title": "すべての道が、見えた。"
+      }
+    },
+    {
+      "name": "All-eleven completion",
+      "passed": true,
+      "evidence": "すべての道が、見えた。"
+    },
+    {
+      "name": "Protected BGM decoded and playing from clear dialog",
+      "passed": true,
+      "evidence": {
+        "duration": 141.473673,
+        "error": null,
+        "loop": true,
+        "paused": false,
+        "src": "blob:http://127.0.0.1:5201/e037370a-3dfd-42ea-a9b9-9b067408c2f5",
+        "time": 55.842726
+      }
+    },
+    {
+      "name": "Clear-dialog mute stops BGM",
+      "passed": true,
+      "evidence": true
+    },
+    {
+      "name": "Undo restores mistakenly spent blink",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "name": "New BGM credit and source link",
+      "passed": true,
+      "evidence": "MADE WITH A LITTLE MAGIC\n\n素材・クレジット\n\n美術：Imagegenによるオリジナル生成画像\n\nBGM：迷わず進め！迷宮コロコロ / こーち（OpenTracks）\n\n効果音：Kenney UI Audio（CC0）\n\nアイコン：Tabler Icons（MIT）\n\n進行をこのブラウザに保存します。これまでのクリア記録も引き継ぎます。"
+    },
+    {
+      "name": "English discovery and final hint",
+      "passed": true,
+      "evidence": "Hint 3 / 3\nFollow the upper rim: amber, blue, amber costs two blinks. Approach the exit from its right."
+    },
+    {
+      "name": "Development warning/error logs",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "Production square maze 1440x900",
+      "passed": true,
+      "evidence": {
+        "h": 900,
+        "images": true,
+        "sh": 900,
+        "sw": 1440,
+        "w": 1440
+      }
+    },
+    {
+      "name": "Production square maze 1280x810",
+      "passed": true,
+      "evidence": {
+        "h": 810,
+        "images": true,
+        "sh": 810,
+        "sw": 1280,
+        "w": 1280
+      }
+    },
+    {
+      "name": "Production square maze 900x900 after layout fix",
+      "passed": true,
+      "evidence": {
+        "h": 900,
+        "images": true,
+        "sh": 900,
+        "sw": 900,
+        "w": 900
+      }
+    },
+    {
+      "name": "Production square maze 720x1280",
+      "passed": true,
+      "evidence": {
+        "h": 1280,
+        "images": true,
+        "sh": 1280,
+        "sw": 720,
+        "w": 720
+      }
+    },
+    {
+      "name": "Production BGM playback",
+      "passed": true,
+      "evidence": {
+        "duration": 141.473673,
+        "loop": true,
+        "paused": false,
+        "src": "blob:http://127.0.0.1:5202/9066f750-4cda-420d-a31f-311f080fc790",
+        "time": 0.029058
+      }
+    },
+    {
+      "name": "Production warning/error logs",
+      "passed": true,
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "provider": "Built-in Imagegen",
+  "generated_date": "2026-10-12",
+  "source": "C:\\Users\\hiro\\.codex\\generated_images\\01a12e65-80ca-7a93-8222-f6b0a2e8b41d\\exec-ef9eae64-0a17-4419-a09c-fdd1309b9a52.png",
+  "reference": "C:\\Users\\hiro\\Downloads\\目を閉じて進む迷宮設計図.png",
+  "source_dimensions": [
+    1774,
+    887
+  ],
+  "source_mode": "RGBA",
+  "source_sha256": "2557b329ead466ed2217b8e7f224900a366b442c2c20e05a8642ac9065c1de58",
+  "transparent_background": true,
+  "assets": [
+    {
+      "file": "public/assets/art/v02/wall.png",
+      "source_region": [
+        0,
+        170,
+        475,
+        320
+      ],
+      "significant_alpha_bbox": [
+        13,
+        23,
+        452,
+        120
+      ],
+      "padded_crop": [
+        10,
+        20,
+        455,
+        123
+      ],
+      "rendered_dimensions": [
+        252,
+        44
+      ],
+      "final_dimensions": [
+        256,
+        48
+      ],
+      "sha256": "34598aa428182430683f1af1d0fdc561ed50181f54b4ef0cbf0798d7c46e73d9",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "public/assets/art/v02/floor.png",
+      "source_region": [
+        480,
+        40,
+        880,
+        430
+      ],
+      "significant_alpha_bbox": [
+        34,
+        36,
+        359,
+        359
+      ],
+      "padded_crop": [
+        31,
+        33,
+        362,
+        362
+      ],
+      "rendered_dimensions": [
+        252,
+        252
+      ],
+      "final_dimensions": [
+        256,
+        256
+      ],
+      "sha256": "5c257282717b294d723f20c55f63799644bdc5d978cab4bf37ae771636e5604c",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "public/assets/art/v02/blue-open.png",
+      "source_region": [
+        887,
+        0,
+        1330,
+        443
+      ],
+      "significant_alpha_bbox": [
+        39,
+        110,
+        406,
+        356
+      ],
+      "padded_crop": [
+        36,
+        107,
+        409,
+        359
+      ],
+      "rendered_dimensions": [
+        252,
+        170
+      ],
+      "final_dimensions": [
+        256,
+        176
+      ],
+      "sha256": "a740c3e739b6be62a1464d0bca204184b8cc7401a34d72bb93be79620bfd710a",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "public/assets/art/v02/blue-closed.png",
+      "source_region": [
+        1330,
+        0,
+        1774,
+        443
+      ],
+      "significant_alpha_bbox": [
+        39,
+        110,
+        406,
+        356
+      ],
+      "padded_crop": [
+        36,
+        107,
+        409,
+        359
+      ],
+      "rendered_dimensions": [
+        252,
+        170
+      ],
+      "final_dimensions": [
+        256,
+        176
+      ],
+      "sha256": "f2cafaa61036f751e75d0788ccd0afa2e1b64555d1de0c796f12bd1eb979faff",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "public/assets/art/v02/amber-open.png",
+      "source_region": [
+        0,
+        443,
+        443,
+        887
+      ],
+      "significant_alpha_bbox": [
+        39,
+        95,
+        406,
+        342
+      ],
+      "padded_crop": [
+        36,
+        92,
+        409,
+        345
+      ],
+      "rendered_dimensions": [
+        252,
+        171
+      ],
+      "final_dimensions": [
+        256,
+        176
+      ],
+      "sha256": "baffa8ee9d02b173d6cf28434106d82d3a1077321af47bf6bf07ef57ca419201",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "public/assets/art/v02/amber-closed.png",
+      "source_region": [
+        443,
+        443,
+        887,
+        887
+      ],
+      "significant_alpha_bbox": [
+        39,
+        95,
+        406,
+        342
+      ],
+      "padded_crop": [
+        36,
+        92,
+        409,
+        345
+      ],
+      "rendered_dimensions": [
+        252,
+        171
+      ],
+      "final_dimensions": [
+        256,
+        176
+      ],
+      "sha256": "ceb8358d0df3488914b5c982a5ef9c2305539dc35397f598365a0ca4db472524",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "public/assets/art/v02/traveler.png",
+      "source_region": [
+        887,
+        443,
+        1330,
+        887
+      ],
+      "significant_alpha_bbox": [
+        117,
+        49,
+        341,
+        390
+      ],
+      "padded_crop": [
+        114,
+        46,
+        344,
+        393
+      ],
+      "rendered_dimensions": [
+        148,
+        224
+      ],
+      "final_dimensions": [
+        256,
+        256
+      ],
+      "sha256": "3b2c6e97c660b2cc01edb66d6d3c9f3c1b7320a528d63b156967ae0bf8cbeef1",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "public/assets/art/v02/goal.png",
+      "source_region": [
+        1330,
+        443,
+        1774,
+        887
+      ],
+      "significant_alpha_bbox": [
+        61,
+        22,
+        382,
+        396
+      ],
+      "padded_crop": [
+        58,
+        19,
+        385,
+        399
+      ],
+      "rendered_dimensions": [
+        200,
+        232
+      ],
+      "final_dimensions": [
+        256,
+        256
+      ],
+      "sha256": "e00e65a38b51f5d8be1e7b75bc3fd54105d6304c40a932c5633d7aa9d396458c",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ]
+}

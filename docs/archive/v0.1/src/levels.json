@@ -1,0 +1,155 @@
+{
+  "version": "0.1",
+  "symbols": {
+    "#": "fixed_wall",
+    ".": "floor",
+    "S": "start",
+    "G": "goal",
+    "A": "blue_eye",
+    "B": "amber_eye"
+  },
+  "levels": [
+    {
+      "id": "001",
+      "title": "はじめてのまばたき",
+      "grid": [
+        "#######",
+        "#S.A.G#",
+        "#######"
+      ],
+      "blinkLimit": 1,
+      "initialPhase": "BLUE_OPEN",
+      "intent": "目を閉じると壁を通り抜けられる",
+      "verifiedSolution": "RTRRR",
+      "verifiedActions": 5,
+      "verifiedBlinks": 1,
+      "searchStates": 7
+    },
+    {
+      "id": "002",
+      "title": "安全な足場",
+      "grid": [
+        "#########",
+        "#S.A.B.G#",
+        "#########"
+      ],
+      "blinkLimit": 2,
+      "initialPhase": "BLUE_OPEN",
+      "intent": "閉じた目の上では世界を切り替えられない",
+      "verifiedSolution": "RTRRTRRR",
+      "verifiedActions": 8,
+      "verifiedBlinks": 2,
+      "searchStates": 12
+    },
+    {
+      "id": "003",
+      "title": "眠っている目",
+      "grid": [
+        "#########",
+        "#S.B#...#",
+        "###.###.#",
+        "#...A..G#",
+        "#########"
+      ],
+      "blinkLimit": 1,
+      "initialPhase": "BLUE_OPEN",
+      "intent": "最初にまばたきしない方がよい場合がある",
+      "verifiedSolution": "RRDDTRRRR",
+      "verifiedActions": 9,
+      "verifiedBlinks": 1,
+      "searchStates": 17
+    },
+    {
+      "id": "004",
+      "title": "目と目のすきま",
+      "grid": [
+        "#########",
+        "#S..AB.G#",
+        "#..##...#",
+        "#..A.B..#",
+        "#########"
+      ],
+      "blinkLimit": 2,
+      "initialPhase": "BLUE_OPEN",
+      "intent": "異色の目が直結している場所は通れない。安全床を経由する",
+      "verifiedSolution": "RDDTRRTRRRUU",
+      "verifiedActions": 12,
+      "verifiedBlinks": 2,
+      "searchStates": 34
+    },
+    {
+      "id": "005",
+      "title": "遠回りこそ近道",
+      "grid": [
+        "###########",
+        "#S..A.B..G#",
+        "#.#######.#",
+        "#..B.A....#",
+        "###########"
+      ],
+      "blinkLimit": 1,
+      "initialPhase": "BLUE_OPEN",
+      "intent": "直線の近道は２まばたき必要だが、迂回路なら１回でよい",
+      "verifiedSolution": "DDRRRTRRRRRUU",
+      "verifiedActions": 13,
+      "verifiedBlinks": 1,
+      "searchStates": 24
+    },
+    {
+      "id": "006",
+      "title": "ジグザグまばたき",
+      "grid": [
+        "#######",
+        "#S.A..#",
+        "#####.#",
+        "#..B..#",
+        "#.#####",
+        "#..A.G#",
+        "#######"
+      ],
+      "blinkLimit": 3,
+      "initialPhase": "BLUE_OPEN",
+      "intent": "通路とまばたきの順序を長い迷路に応用する",
+      "verifiedSolution": "RTRRRDDLTLLLDDRTRRR",
+      "verifiedActions": 19,
+      "verifiedBlinks": 3,
+      "searchStates": 39
+    },
+    {
+      "id": "007",
+      "title": "まばたき禁止",
+      "grid": [
+        "###########",
+        "#S..A....G#",
+        "#.#######.#",
+        "#..B......#",
+        "###########"
+      ],
+      "blinkLimit": 0,
+      "initialPhase": "BLUE_OPEN",
+      "intent": "切り替えないという選択にも価値がある",
+      "verifiedSolution": "DDRRRRRRRRUU",
+      "verifiedActions": 12,
+      "verifiedBlinks": 0,
+      "searchStates": 15
+    },
+    {
+      "id": "008",
+      "title": "最後の選択",
+      "grid": [
+        "###########",
+        "#S.A.B.A.G#",
+        "#.#######.#",
+        "#...A.B...#",
+        "###########"
+      ],
+      "blinkLimit": 2,
+      "initialPhase": "BLUE_OPEN",
+      "intent": "見かけ上の近道より少ない切り替えで済む経路を選ぶ",
+      "verifiedSolution": "DDRRTRRTRRRRUU",
+      "verifiedActions": 14,
+      "verifiedBlinks": 2,
+      "searchStates": 32
+    }
+  ]
+}

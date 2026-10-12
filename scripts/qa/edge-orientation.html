@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BLINK MAZE orientation QA</title></head><body>
+<main class="game-shell"><h1>Boundary orientation QA</h1><p>Render-only fixture. This page is excluded from production builds.</p><div class="qa-pair"><section><h2>Phase 0</h2><div id="phase0"></div></section><section><h2>Phase 1</h2><div id="phase1"></div></section></div></main>
+<style>.qa-pair{display:flex;gap:40px;margin:40px auto;max-width:800px}.qa-pair>section{flex:1}.qa-pair .board-frame{width:100%}@media(max-width:600px){.qa-pair{display:block;max-width:300px}.qa-pair>section{margin:30px 0}}</style>
+<script type="module">
+import '../../src/style.css';
+import {renderBoard} from '../../src/board.ts';
+import {createState} from '../../src/core.ts';
+const fixture={id:'QA',title:'Horizontal wall eyes',width:2,height:2,start:[0,0],goal:[1,1],blinkLimit:1,initialPhase:0,connections:[{x:0,y:0,dir:'D',kind:'A'},{x:1,y:0,dir:'D',kind:'B'},{x:0,y:0,dir:'R',kind:'open'},{x:0,y:1,dir:'R',kind:'open'}]};
+const state=createState(fixture);
+document.querySelector('#phase0').innerHTML=renderBoard(fixture,state,'en','Phase 0');
+document.querySelector('#phase1').innerHTML=renderBoard(fixture,{...state,phase:1},'en','Phase 1');
+</script></body></html>

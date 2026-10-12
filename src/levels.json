@@ -1,0 +1,1120 @@
+{
+  "version": "0.3",
+  "rules": {
+    "coordinateSystem": "0-based, x increases rightward, y increases downward",
+    "grid": "All width x height cells are walkable; walls are BETWEEN cells.",
+    "defaultEdge": "stone",
+    "connection": "{x,y,dir:R|D,kind:open|A|B}; x,y is the left/top cell",
+    "phase0": "A=OPEN EYE=BLOCKING WALL; B=CLOSED EYE=PASSABLE GAP",
+    "phase1": "A=CLOSED EYE=PASSABLE GAP; B=OPEN EYE=BLOCKING WALL",
+    "blink": "Switches global phase, consumes 1 budget; never invalid due to player location since doors are edges.",
+    "undo": "Restores player position, phase and blink count"
+  },
+  "levels": [
+    {
+      "id": "001",
+      "title": "FIRST BLINK",
+      "width": 4,
+      "height": 1,
+      "start": [
+        0,
+        0
+      ],
+      "goal": [
+        3,
+        0
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        }
+      ],
+      "intent": "青い目は最初通れないが、まばたき1回で通路に変わる。",
+      "verifiedSolution": "RTRR",
+      "verifiedActions": 4,
+      "verifiedBlinks": 1,
+      "solverStateCount": 6
+    },
+    {
+      "id": "002",
+      "title": "TWO KINDS OF EYES",
+      "width": 5,
+      "height": 1,
+      "start": [
+        0,
+        0
+      ],
+      "goal": [
+        4,
+        0
+      ],
+      "blinkLimit": 2,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        }
+      ],
+      "intent": "青を開けると琥珀が閉まる。同じ道を続けて進むには2回の切り替えが必要。",
+      "verifiedSolution": "RTRRTR",
+      "verifiedActions": 6,
+      "verifiedBlinks": 2,
+      "solverStateCount": 11
+    },
+    {
+      "id": "003",
+      "title": "ALREADY ASLEEP",
+      "width": 5,
+      "height": 1,
+      "start": [
+        0,
+        0
+      ],
+      "goal": [
+        4,
+        0
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        }
+      ],
+      "intent": "最初から閉じた琥珀の目は通れる。まばたきは後回しにする。",
+      "verifiedSolution": "RRTRR",
+      "verifiedActions": 5,
+      "verifiedBlinks": 1,
+      "solverStateCount": 8
+    },
+    {
+      "id": "004",
+      "title": "THE LONG WAY AROUND",
+      "width": 5,
+      "height": 3,
+      "start": [
+        0,
+        1
+      ],
+      "goal": [
+        4,
+        1
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        }
+      ],
+      "intent": "上下の分岐を比較して、まばたき回数の少ない経路を選択する。",
+      "verifiedSolution": "RDRRUTR",
+      "verifiedActions": 7,
+      "verifiedBlinks": 1,
+      "solverStateCount": 16
+    },
+    {
+      "id": "005",
+      "title": "FEWER BLINKS, LONGER WALK",
+      "width": 7,
+      "height": 3,
+      "start": [
+        0,
+        1
+      ],
+      "goal": [
+        6,
+        1
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        }
+      ],
+      "intent": "近道は3回切り替える。遠回りなら琥珀を先に通り、青を一回だけ開けて出口に進める。",
+      "verifiedSolution": "RDRRRTRUR",
+      "verifiedActions": 9,
+      "verifiedBlinks": 1,
+      "solverStateCount": 18
+    },
+    {
+      "id": "006",
+      "title": "THE QUIET CORRIDOR",
+      "width": 5,
+      "height": 3,
+      "start": [
+        0,
+        1
+      ],
+      "goal": [
+        4,
+        1
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        }
+      ],
+      "intent": "BLINKを使い切る必要はない。青の近道は2回必要だが、眠った琥珀の回廊なら0回で届く。",
+      "verifiedSolution": "DRRRRU",
+      "verifiedActions": 6,
+      "verifiedBlinks": 0,
+      "chapter": "discovery"
+    },
+    {
+      "id": "007",
+      "title": "ONE SIGNAL",
+      "width": 5,
+      "height": 4,
+      "start": [
+        0,
+        1
+      ],
+      "goal": [
+        4,
+        1
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "D",
+          "kind": "B"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "dir": "D",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "dir": "D",
+          "kind": "A"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "dir": "D",
+          "kind": "A"
+        }
+      ],
+      "intent": "2つの琥珀を先に抜ければ、曲がりくねった5つの青の壁を1回の合図で通せる。",
+      "verifiedSolution": "RDTRDRRUU",
+      "verifiedActions": 9,
+      "verifiedBlinks": 1,
+      "chapter": "discovery"
+    },
+    {
+      "id": "008",
+      "title": "THE LAST THRESHOLD",
+      "width": 5,
+      "height": 3,
+      "start": [
+        0,
+        1
+      ],
+      "goal": [
+        4,
+        1
+      ],
+      "blinkLimit": 2,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "D",
+          "kind": "B"
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "dir": "D",
+          "kind": "B"
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "D",
+          "kind": "A"
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "dir": "D",
+          "kind": "B"
+        }
+      ],
+      "intent": "出口直前の琥珀は最後にphase0が必要。青を抜けた先から出口側へ戻す2回目のBLINKを逆算する。",
+      "verifiedSolution": "URTRRRTD",
+      "verifiedActions": 8,
+      "verifiedBlinks": 2,
+      "chapter": "discovery"
+    },
+    {
+      "id": "009",
+      "title": "TWO LONG ROADS",
+      "width": 7,
+      "height": 5,
+      "start": [
+        0,
+        2
+      ],
+      "goal": [
+        6,
+        2
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "dir": "D",
+          "kind": "open"
+        }
+      ],
+      "intent": "同じ長さの迂回路でも目の並びが違う。上はAABB AAで3回、下はBB AAAAで1回。壁の数より色が切り替わる回数を見る。",
+      "verifiedSolution": "DDRRTRRRRUU",
+      "verifiedActions": 11,
+      "verifiedBlinks": 1,
+      "chapter": "discovery"
+    },
+    {
+      "id": "010",
+      "title": "ANOTHER MORNING",
+      "width": 5,
+      "height": 5,
+      "start": [
+        0,
+        2
+      ],
+      "goal": [
+        4,
+        2
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 1,
+      "connections": [
+        {
+          "x": 0,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "D",
+          "kind": "A"
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "dir": "D",
+          "kind": "B"
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "dir": "D",
+          "kind": "open"
+        }
+      ],
+      "intent": "初期状態が逆。青=常に閉塞と思い込まず、いま開閉している目を見る。上のAA BBの道なら1回。",
+      "verifiedSolution": "UURRTRRDD",
+      "verifiedActions": 9,
+      "verifiedBlinks": 1,
+      "chapter": "discovery"
+    },
+    {
+      "id": "011",
+      "title": "THE OTHER SIDE",
+      "width": 7,
+      "height": 5,
+      "start": [
+        0,
+        2
+      ],
+      "goal": [
+        3,
+        2
+      ],
+      "blinkLimit": 2,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "D",
+          "kind": "B"
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "dir": "D",
+          "kind": "B"
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "dir": "D",
+          "kind": "open"
+        }
+      ],
+      "intent": "近い出口を左から目指すとABAで3回必要。いったん出口を通り過ぎる外周を選び、右の琥珀から入れば2回。",
+      "verifiedSolution": "UURTRRRRTRDDLLL",
+      "verifiedActions": 15,
+      "verifiedBlinks": 2,
+      "chapter": "discovery"
+    }
+  ]
+}

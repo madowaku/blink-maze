@@ -1,0 +1,102 @@
+[
+  {
+    "check": "360x800 stage1 fits with all action targets >=44px",
+    "passed": true
+  },
+  {
+    "check": "360x800 stage4 fits",
+    "passed": true
+  },
+  {
+    "check": "outer wall rejects without history",
+    "passed": true
+  },
+  {
+    "check": "reduced-motion instant switching allows the following move",
+    "passed": true
+  },
+  {
+    "check": "budget overflow consumes nothing",
+    "passed": true
+  },
+  {
+    "check": "undo restores blink phase and budget after movement undo",
+    "passed": true
+  },
+  {
+    "check": "v0.2 UI solution stage 1",
+    "passed": true
+  },
+  {
+    "check": "v0.2 UI solution stage 2",
+    "passed": true
+  },
+  {
+    "check": "v0.2 UI solution stage 3",
+    "passed": true
+  },
+  {
+    "check": "v0.2 UI solution stage 4",
+    "passed": true
+  },
+  {
+    "check": "v0.2 UI solution stage 5",
+    "passed": true
+  },
+  {
+    "check": "clear dialog stops game input",
+    "passed": true
+  },
+  {
+    "check": "all eyes centered on boundaries, constant floor cells",
+    "passed": true
+  },
+  {
+    "check": "replay resets position phase and budget",
+    "passed": true
+  },
+  {
+    "check": "five clears and selected level persist",
+    "passed": true
+  },
+  {
+    "check": "720x1280 stage5 fits",
+    "passed": true
+  },
+  {
+    "check": "help dialog gates movement",
+    "passed": true
+  },
+  {
+    "check": "sound can enable while help is open",
+    "passed": true
+  },
+  {
+    "check": "sound can mute while help is open",
+    "passed": true
+  },
+  {
+    "check": "optional hint expands",
+    "passed": true
+  },
+  {
+    "check": "English stage5 fits at 360x800 with >=44px controls",
+    "passed": true
+  },
+  {
+    "check": "English locale persists",
+    "passed": true
+  },
+  {
+    "check": "horizontal eye fixture both phases align and reverse passability",
+    "passed": true
+  },
+  {
+    "check": "1280x810 desktop stage4 fits",
+    "passed": true
+  },
+  {
+    "check": "1440x900 desktop stage4 fits",
+    "passed": true
+  }
+]

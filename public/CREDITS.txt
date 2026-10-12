@@ -1,0 +1,23 @@
+BLINK MAZE v0.3
+
+Artwork: Original images generated with Imagegen for BLINK MAZE.
+Music: 迷わず進め！迷宮コロコロ by こーち, via OpenTracks (formerly DOVA-SYNDROME).
+https://opentracks.com/bgm/detail/16572
+https://opentracks.com/creator/detail/328
+https://opentracks.com/help/articles/license/
+https://opentracks.com/help/articles/terms/
+Used as background music in this game under the OpenTracks audio license.
+Converted to a game-only binary container; decoded audio is unchanged.
+Playback volume is reduced. Do not extract or redistribute the music separately.
+
+Sound effects: Kenney UI Audio, Creative Commons Zero (CC0).
+https://kenney.nl/assets/ui-audio
+
+Icons: Tabler Icons v3.47.0, MIT.
+https://github.com/tabler/tabler-icons
+
+Fonts: DM Sans, Fraunces. SIL Open Font License 1.1.
+https://github.com/google/fonts/tree/main/ofl/dmsans
+https://github.com/google/fonts/tree/main/ofl/fraunces
+
+License texts are included in licenses/.

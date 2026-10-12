@@ -1,0 +1,86 @@
+[
+  {
+    "check": "wall/budget/undo",
+    "passed": true
+  },
+  {
+    "check": "unsafe blink retains budget",
+    "passed": true
+  },
+  {
+    "check": "help gates game input",
+    "passed": true
+  },
+  {
+    "check": "UI solution stage 1",
+    "passed": true
+  },
+  {
+    "check": "UI solution stage 2",
+    "passed": true
+  },
+  {
+    "check": "UI solution stage 3",
+    "passed": true
+  },
+  {
+    "check": "UI solution stage 4",
+    "passed": true
+  },
+  {
+    "check": "UI solution stage 5",
+    "passed": true
+  },
+  {
+    "check": "UI solution stage 6",
+    "passed": true
+  },
+  {
+    "check": "zero-budget stage UI rejects blink",
+    "passed": true
+  },
+  {
+    "check": "UI solution stage 7",
+    "passed": true
+  },
+  {
+    "check": "UI solution stage 8",
+    "passed": true
+  },
+  {
+    "check": "clear dialog stops game input",
+    "passed": true
+  },
+  {
+    "check": "replay resets phase and budget",
+    "passed": true
+  },
+  {
+    "check": "selected level and eight clears persist",
+    "passed": true
+  },
+  {
+    "check": "optional hint opens",
+    "passed": true
+  },
+  {
+    "check": "audio enables after user gesture and media loading",
+    "passed": true
+  },
+  {
+    "check": "audio can mute",
+    "passed": true
+  },
+  {
+    "check": "held movement key advances one tile",
+    "passed": true
+  },
+  {
+    "check": "blink animation rejects immediate move",
+    "passed": true
+  },
+  {
+    "check": "390x844 has no overflow",
+    "passed": true
+  }
+]

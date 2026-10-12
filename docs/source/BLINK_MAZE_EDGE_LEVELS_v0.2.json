@@ -1,0 +1,328 @@
+{
+  "version": "0.2",
+  "rules": {
+    "coordinateSystem": "0-based, x increases rightward, y increases downward",
+    "grid": "All width x height cells are walkable; walls are BETWEEN cells.",
+    "defaultEdge": "stone",
+    "connection": "{x,y,dir:R|D,kind:open|A|B}; x,y is the left/top cell",
+    "phase0": "A=OPEN EYE=BLOCKING WALL; B=CLOSED EYE=PASSABLE GAP",
+    "phase1": "A=CLOSED EYE=PASSABLE GAP; B=OPEN EYE=BLOCKING WALL",
+    "blink": "Switches global phase, consumes 1 budget; never invalid due to player location since doors are edges.",
+    "undo": "Restores player position, phase and blink count"
+  },
+  "levels": [
+    {
+      "id": "001",
+      "title": "FIRST BLINK",
+      "width": 4,
+      "height": 1,
+      "start": [
+        0,
+        0
+      ],
+      "goal": [
+        3,
+        0
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        }
+      ],
+      "intent": "青い目は最初通れないが、まばたき1回で通路に変わる。",
+      "verifiedSolution": "RTRR",
+      "verifiedActions": 4,
+      "verifiedBlinks": 1,
+      "solverStateCount": 6
+    },
+    {
+      "id": "002",
+      "title": "TWO KINDS OF EYES",
+      "width": 5,
+      "height": 1,
+      "start": [
+        0,
+        0
+      ],
+      "goal": [
+        4,
+        0
+      ],
+      "blinkLimit": 2,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        }
+      ],
+      "intent": "青を開けると琥珀が閉まる。同じ道を続けて進むには2回の切り替えが必要。",
+      "verifiedSolution": "RTRRTR",
+      "verifiedActions": 6,
+      "verifiedBlinks": 2,
+      "solverStateCount": 11
+    },
+    {
+      "id": "003",
+      "title": "ALREADY ASLEEP",
+      "width": 5,
+      "height": 1,
+      "start": [
+        0,
+        0
+      ],
+      "goal": [
+        4,
+        0
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 0,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "dir": "R",
+          "kind": "open"
+        }
+      ],
+      "intent": "最初から閉じた琥珀の目は通れる。まばたきは後回しにする。",
+      "verifiedSolution": "RRTRR",
+      "verifiedActions": 5,
+      "verifiedBlinks": 1,
+      "solverStateCount": 8
+    },
+    {
+      "id": "004",
+      "title": "THE LONG WAY AROUND",
+      "width": 5,
+      "height": 3,
+      "start": [
+        0,
+        1
+      ],
+      "goal": [
+        4,
+        1
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        }
+      ],
+      "intent": "上下の分岐を比較して、まばたき回数の少ない経路を選択する。",
+      "verifiedSolution": "RDRRUTR",
+      "verifiedActions": 7,
+      "verifiedBlinks": 1,
+      "solverStateCount": 16
+    },
+    {
+      "id": "005",
+      "title": "FEWER BLINKS, LONGER WALK",
+      "width": 7,
+      "height": 3,
+      "start": [
+        0,
+        1
+      ],
+      "goal": [
+        6,
+        1
+      ],
+      "blinkLimit": 1,
+      "initialPhase": 0,
+      "connections": [
+        {
+          "x": 0,
+          "y": 1,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "dir": "R",
+          "kind": "B"
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "dir": "R",
+          "kind": "open"
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "dir": "R",
+          "kind": "A"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "dir": "D",
+          "kind": "open"
+        }
+      ],
+      "intent": "近道は3回切り替える。遠回りなら琥珀を先に通り、青を一回だけ開けて出口に進める。",
+      "verifiedSolution": "RDRRRTRUR",
+      "verifiedActions": 9,
+      "verifiedBlinks": 1,
+      "solverStateCount": 18
+    }
+  ]
+}

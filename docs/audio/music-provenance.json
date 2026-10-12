@@ -1,0 +1,19 @@
+{
+  "checked": "2026-10-12",
+  "title": "迷わず進め！迷宮コロコロ",
+  "author": "こーち",
+  "source": "https://opentracks.com/bgm/detail/16572",
+  "license": "https://opentracks.com/help/articles/license/",
+  "creator": "https://opentracks.com/creator/detail/328",
+  "original": {
+    "path": "C:\\Users\\hiro\\Downloads\\迷わず進め！迷宮コロコロ.mp3",
+    "bytes": 2834724,
+    "sha256": "1d04ce3868c29b90ec4f3980b02c5471d1f1dd19d94c1a3a84c1e5ab1aec4dbd"
+  },
+  "shipped": {
+    "path": "public/assets/audio/maze-korokoro.bmau",
+    "bytes": 2834761,
+    "sha256": "06e6277f0e216d343938ec56e988596a61173f70af6828a999d5c3289e5d3901"
+  },
+  "processing": "AES-128-GCM container conversion. Decrypted MP3 is byte-identical; no audio re-encoding. Runtime volume 0.16. Original MP3 is not shipped."
+}

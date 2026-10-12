@@ -1,0 +1,14 @@
+Music notice — checked 2026-10-12
+
+迷わず進め！迷宮コロコロ by こーち
+Track: https://opentracks.com/bgm/detail/16572
+Creator: https://opentracks.com/creator/detail/328
+License: https://opentracks.com/help/articles/license/
+Terms: https://opentracks.com/help/articles/terms/
+
+Used as game background music under the OpenTracks audio license.
+This notice points to the official terms; it does not replace them.
+Rights remain with the composer. Do not extract or redistribute the music
+separately, sell it separately, or register it as your own music.
+The asset is converted to a game-only container. Original MP3 is not shipped.
+Decoded audio is unchanged; in-game volume is reduced.
